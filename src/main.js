@@ -8,11 +8,11 @@ class LoveLauncher {
     }
 
     async readTemplateFile(name) {
-        const res = this.getAsset(`templates/${name}.lua`);
-        return (await res).text();
+        const res = await this.getAsset(`templates/${name}.lua`);
+        return res.text();
     }
 
-    async registerProject() {
+    async initTemplate() {
         const getTemplate = async () => {
             return {
                 "init.lua": await this.readTemplateFile("init"),
@@ -34,12 +34,12 @@ class LoveLauncher {
         projects.set("LÖVE", getTemplate, icon);
     }
 
-    loveRun(url) {
-        system.luanchApp
+    packLove() {
+        
     }
 
     async init() {
-        this.registerProject();
+        this.initTemplate();
     }
 
     async destroy() {}

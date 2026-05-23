@@ -1,7 +1,7 @@
-{
+{dcv
     "name": "LÖVE Launcher",
     "id": "acode.plugin.lovelauncher",
-    "description": "create love2d projects and launch the love.apk in android.",
+    "descridption": "create love2d projects and launch the love.apk in android.",
     "keywords": ["lua", "love2d", "game", "dev", "project"],
     "price": 0,
     

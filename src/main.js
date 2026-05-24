@@ -6,6 +6,11 @@ const commands = acode.require("commands");
 const projects = acode.require("projects");
 
 /**
+ * 辅助函数：获取当前打开项目
+ */
+
+/**
+ * 辅助函数：扫描项目，获取整个项目内容
  * @param {fsOperation} projDir 项目目录FS
  * @param {string} baseUrl 项目基础URL
  * @returns {Promise<Record<string, Uint8Array>>} 文件内容映射
@@ -29,6 +34,7 @@ async function scanProj(projDir, baseUrl) {
     return dataMap;
 }
 
+
 class LoveLauncher {
     async getAsset(name) {
         const res = await fetch(`${this.baseUrl}assets/${name}`);
@@ -43,7 +49,7 @@ class LoveLauncher {
     async initTemplate() {
         const getTemplate = async () => {
             return {
-                "init.lua": await this.readTemplateFile("init"),
+                ".acode/PROJTYPE": "LOVE2D",
                 "conf.lua": await this.readTemplateFile("conf"),
                 "main.lua": await this.readTemplateFile("main"),
             };

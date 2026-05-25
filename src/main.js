@@ -219,8 +219,11 @@ class LoveLauncher {
         this.initCommand();
     }
 
-    async destroy() {}
+    async destroy() {
+        commands.removeCommand("lovelauncher.packlove");
+    }
 }
+
 
 if (window.acode) {
     const thisPlugin = new LoveLauncher();

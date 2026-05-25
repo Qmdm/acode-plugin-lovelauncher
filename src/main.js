@@ -202,6 +202,10 @@ class LoveLauncher {
         folder.reload(); // 刷新文件列表
     }
 
+    /* async runLove() {
+        // run .love file in love-android ...
+    } */
+
     initCommand() {
         commands.addCommand({
             name: "lovelauncher.packlove",

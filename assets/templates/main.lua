@@ -1,9 +1,9 @@
--- Enter Program
+-- On enter Program
 function love.load()
     
 end
 
--- Quit Program
+-- On quit Program
 function love.quit()
     
 end

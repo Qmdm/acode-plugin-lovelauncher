@@ -1,4 +1,6 @@
-require "init"
+-- Conf Constants
+GAME_NAME = "Template Game"
+PKG_NAME = "org.example.mygame"
 
 function love.conf(t)
     t.window.title = GAME_NAME
